@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
+  <title>VOID PROTOCOL</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+  <!-- ── Header ── -->
+  <header class="game-header">
+    <h1 class="game-title">◈ VOID PROTOCOL ◈</h1>
+    <p class="game-sub">// something is watching</p>
+  </header>
+
+  <!-- ── Main Content Panels ── -->
+  <main class="panels">
+
+    <!-- Panel 1: Main Game -->
+    <section id="panel-game" class="panel active">
+      <div class="counter-wrap">
+        <div class="counter-label">INSIGHTS COLLECTED</div>
+        <div class="counter" id="counter">0</div>
+        <div class="per-click" id="per-click">+1 per click</div>
+      </div>
+
+      <div class="click-area">
+        <button class="mystery-btn" id="mystery-btn" aria-label="Click to gain Insights">
+          <span class="btn-symbol">◈</span>
+          <span class="btn-ring ring1"></span>
+          <span class="btn-ring ring2"></span>
+        </button>
+        <p class="click-hint">TAP TO REVEAL</p>
+      </div>
+
+      <div class="save-row">
+        <button class="save-btn" onclick="saveGame()">[ SAVE ]</button>
+        <button class="save-btn danger" onclick="resetGame()">[ RESET ]</button>
+        <span class="save-status" id="save-status"></span>
+      </div>
+    </section>
+
+    <!-- Panel 2: Shop -->
+    <section id="panel-shop" class="panel">
+      <h2 class="panel-title">// THE SHOP</h2>
+      <p class="panel-desc">Spend Insights to amplify your perception.</p>
+
+      <div class="shop-section-label">— CLICKER UPGRADES —</div>
+      <ul class="shop-list" id="upgrade-list"></ul>
+
+      <div class="shop-section-label">— STORY UNLOCKS —</div>
+      <ul class="shop-list" id="chapter-list"></ul>
+    </section>
+
+    <!-- Panel 3: Lore Log -->
+    <section id="panel-lore" class="panel">
+      <h2 class="panel-title">// LORE LOG</h2>
+      <p class="panel-desc">Fragments of a truth you were not meant to find.</p>
+      <div id="lore-log"></div>
+    </section>
+
+  </main>
+
+  <!-- ── Bottom Tab Navigation ── -->
+  <nav class="tab-nav">
+    <button class="tab-btn active" data-panel="panel-game">
+      <span class="tab-icon">◈</span>
+      <span class="tab-label">GAME</span>
+    </button>
+    <button class="tab-btn" data-panel="panel-shop">
+      <span class="tab-icon">⌗</span>
+      <span class="tab-label">SHOP</span>
+    </button>
+    <button class="tab-btn" data-panel="panel-lore">
+      <span class="tab-icon">▤</span>
+      <span class="tab-label">LORE</span>
+    </button>
+  </nav>
+
+  <script src="script.js"></script>
+</body>
+</html>
